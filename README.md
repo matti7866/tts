@@ -20,11 +20,25 @@ A modern, responsive web application for searching through labour cards database
 
 ## Files Structure
 
+### Core Application
 - `index.html` - Main search interface
 - `search.php` - Backend API for search functionality
 - `export.php` - CSV export functionality
-- `read_members.php` - Database reading utility
-- `README.md` - This documentation
+- `status.php` - System status checker
+- `test_db.php` - Database connectivity tester
+
+### Database
+- `labour_cards_db.sql.zip` - Complete database export (28.5 MB)
+
+### Tunnel Management
+- `auto_tunnel_keeper.sh` - Auto-restart tunnel service
+- `setup_auto_tunnel.sh` - One-click tunnel setup
+- `start_tunnel.sh` - Manual tunnel starter
+- `tunnel_status.sh` - Tunnel status checker
+
+### Documentation
+- `README.md` - Complete installation and usage guide
+- `ONLINE_ACCESS.md` - Tunnel setup documentation
 
 ## 🚀 Quick Start
 
@@ -55,9 +69,16 @@ A modern, responsive web application for searching through labour cards database
    ```
 
 3. **Configure databases**:
-   - Import your labour cards data into MySQL
-   - Update database credentials in `search.php` and `export.php`
-   - Ensure both `labour_cards_db` and `dddd` databases exist
+   ```bash
+   # Extract and import the included database
+   unzip labour_cards_db.sql.zip
+   mysql -u root -p < labour_cards_db.sql
+   
+   # Or use phpMyAdmin to import the SQL file
+   ```
+   - Update database credentials in `search.php` and `export.php` if needed
+   - The included `labour_cards_db.sql.zip` contains sample data
+   - Create the second database `dddd` with similar structure (missing `nameAr` column)
 
 4. **Start XAMPP services**:
    - Start Apache and MySQL services
