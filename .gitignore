@@ -1,0 +1,56 @@
+# Temporary files and logs
+*.log
+*.tmp
+/tmp/
+debug-cookies.txt
+test-cookies*.txt
+mohre_*.txt
+mohre_*.html
+
+# Database credentials (if any)
+config.php
+database.php
+
+# XAMPP specific
+.htaccess
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs and runtime files
+/tmp/*
+*.pid
+/var/log/*
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Tunnel output files
+tunnel_output.log
+sn_cars_tunnel_*.log
+sn_cars_tunnel_*.txt
+
+# Environment specific
+.env
+.env.local
+.env.production
+
+# Node modules (if any)
+node_modules/
+
+# Composer vendor (if any)
+vendor/
